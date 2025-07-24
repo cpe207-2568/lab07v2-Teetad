@@ -8,6 +8,7 @@ const passwordConfirmInput = document.querySelector("#password-confirm-input");
 
 // create reference for buttons.
 const submitBtn = document.querySelector("#submit-btn");
+const resetBtn = document.querySelector("#reset-btn")
 
 // simple email validation
 function validateEmail(email) {
@@ -99,3 +100,15 @@ submitBtn.onclick = () => {
 };
 
 // add callback function for Reset button.
+resetBtn.onclick = () => {
+  firstNameInput.value = ""
+  lastNameInput.value = ""
+  emailInput.value = ""
+  passwordInput.value = ""
+  passwordConfirmInput.value = ""
+  firstNameInput.onkeyup()
+  lastNameInput.onkeyup()
+  emailInput.onkeyup()
+  passwordInput.onkeyup()
+  passwordConfirmInput.onkeyup()
+}
